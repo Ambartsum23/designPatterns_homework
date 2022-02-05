@@ -1,25 +1,24 @@
 package Steps;
 
-import PageObject.*;
+import PageObject.PopUp;
 import Variables.Variables;
 import org.testng.Assert;
 
 public class SubmitMethods {
-    SubmitElements submit = new SubmitElements();
-    Variables cvladebi = new Variables();
+    PopUp popup = new PopUp();
+    Variables cvladi = new Variables();
 
     public SubmitMethods checkTitile() {
-
-        submit.boxTitle.getText();
-        System.out.println(submit.boxTitle.getText());
-        Assert.assertEquals(submit.boxTitle.getText(), "Thanks for submitting the form");
+        popup.boxTitle.getText();
+        System.out.println(popup.boxTitle.getText());
+        Assert.assertEquals(popup.boxTitle.getText(), "Thanks for submitting the form");
         return this;
     }
 
     public SubmitMethods checkValues() {
-        submit.vv.getText();
-        System.out.println(submit.vv.getText());
-        Assert.assertEquals(submit.vv.getText(), cvladebi.name + " " + cvladebi.lastname);
+        popup.studentName.getText();
+        System.out.println(popup.studentName.getText());
+        Assert.assertEquals(popup.studentName.getText(), cvladi.getName() + " " + cvladi.getLastname());
         return this;
     }
 
