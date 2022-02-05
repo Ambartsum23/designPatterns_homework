@@ -1,11 +1,20 @@
 package Variables;
-
-import org.testng.annotations.DataProvider;
-
 public class Variables {
 
-    public String name = "Ambartsum";
-    public String lastname= "Karapetyan";
-    public String mobnumber= "123123123";
+    private String name = "Ambartsum";
+    private String lastname = "Karapetyan";
+    private String mobnumber = "123123123";
 
-}
+        public String getName() {
+            return this.name;
+        }
+
+        public String getLastname() {
+            return this.lastname;
+        }
+
+        public String getMobnumber() {
+            return this.mobnumber;
+        }
+
+    }
